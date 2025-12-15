@@ -32,7 +32,6 @@ drone-ws-target-tracking-cxx-asio/
 ```
 
 ## Key Patterns Provided
-ClassRule of Six PatternRationaleTlsConfig, AddrConfig, PacketAll DefaultNo raw resourcesWSServer, WSClientMove-only (copy deleted)Unique ownership of sockets/SSLApplicationNon-copyable, Non-movableProcess-lifetime singletonIPacketHandlerNon-copyable, Non-movableAbstract interface
 
 | Class                           | Rule of Six Pattern            | Rationale                       |
 |---------------------------------|--------------------------------|---------------------------------|
