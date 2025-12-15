@@ -49,6 +49,9 @@ mkdir -p certificates
 mkcert -cert-file certificates/server.pem \
        -key-file certificates/server-key.pem \
        localhost 127.0.0.1 ::1
+# Or use the provided scripts/gen-certs.sh script
+# Generate certs
+chmod +x scripts/gen-certs.sh && ./scripts/gen-certs.sh
 
 # Build
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
