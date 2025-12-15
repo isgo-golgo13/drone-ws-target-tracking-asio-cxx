@@ -2,7 +2,12 @@
 TLS WebSocket Server, WebSocket Client and Torpedo Firing Application Protocol with Retry Backoff Algorithm using C++23, Boost.Beast C++ WebSockets API, Boost Asio Coroutines
 
 
-
+Production-Grade TLS WebSocket Client/Server using progressive C++23 idioms:
+- **Rule of Six** class design with comprehensive documentation
+- **Policy-Oriented Strategy Patterns** for compile-time polymorphism
+- **Perfect forwarding Factory Method Patterns** using variadic templates
+- **Retry Protocol Integration** with exponential backoff
+- **Asio Coroutines** (`asio::awaitable`) without Cobalt dependency
 
 ## Architecture
 
