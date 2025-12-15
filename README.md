@@ -31,6 +31,17 @@ drone-ws-target-tracking-cxx-asio/
 └── src/main.cpp                # Orchestrator (Non-copyable, Non-movable)
 ```
 
+## Key Patterns Provided
+ClassRule of Six PatternRationaleTlsConfig, AddrConfig, PacketAll DefaultNo raw resourcesWSServer, WSClientMove-only (copy deleted)Unique ownership of sockets/SSLApplicationNon-copyable, Non-movableProcess-lifetime singletonIPacketHandlerNon-copyable, Non-movableAbstract interface
+
+| Class                           | Rule of Six Pattern            | Rationale                       |
+|---------------------------------|--------------------------------|---------------------------------|
+| TlsConfig, AddrConfig, Packet   | All `default`                  | No raw resources                |
+| WSServer, WSClient              | Move-only (copy deleted)       | Unique ownership of sockets/SSL |
+| Application                     | Non-copyable, Non-movable      | Process-lifetime singleton      |
+| IPacketHandler                  | Non-copyable, Non-movable      | Abstract interface              |
+
+
 ## Building
 
 ```bash
