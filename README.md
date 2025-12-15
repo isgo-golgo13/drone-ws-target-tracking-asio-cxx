@@ -13,11 +13,22 @@ Production-Grade TLS WebSocket Client/Server using progressive C++23 idioms:
 
 ```
 drone-ws-target-tracking-cxx-asio/
-├── svckit/           # Service configuration (AddrConfig)
-├── protocol/         # Packet types, Strategy policies, Retry protocol
-├── ws-server/        # TLS WebSocket server
-├── ws-client/        # TLS WebSocket client
-└── src/main.cpp      # Orchestrator (runs both)
+├── CMakeLists.txt              # Boost Beast + Asio (NO Cobalt)
+├── README.md                   # Rule of Six masterclass documentation
+├── scripts/gen-certs.sh        # TLS certificate generator
+├── svckit/
+│   └── include/svc_addr_config.hpp   # AddrConfig with Rule of Six (All Default)
+├── protocol/
+│   ├── include/protocol.hpp    # Policy-based Strategy pattern, Packet class
+│   ├── include/retry.hpp       # Exponential backoff with policy design
+│   └── src/                    # Template instantiations
+├── ws-server/
+│   ├── include/ws_server.hpp   # Rule of Six: Move-only pattern
+│   └── src/ws_server.cpp       # std::exchange in move ops
+├── ws-client/
+│   ├── include/ws_client.hpp   # Rule of Six: Move-only + retry integration
+│   └── src/ws_client.cpp       # std::exchange in move ops
+└── src/main.cpp                # Orchestrator (Non-copyable, Non-movable)
 ```
 
 ## Building
